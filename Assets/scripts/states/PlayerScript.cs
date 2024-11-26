@@ -19,7 +19,7 @@ namespace Player
         [SerializeField] public FixedJoystick _joystick;
         [SerializeField] public Animator _animator;
 
-        [SerializeField] private float moveSpeed;
+        [SerializeField] public float moveSpeed;
 
         public Sprite[] animationforcar;
         public SpriteRenderer sr;

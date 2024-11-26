@@ -26,7 +26,7 @@ namespace Enemy
         
         [SerializeField] public Animator _animator;
 
-        [SerializeField] private float moveSpeed;
+        [SerializeField] public float moveSpeed;
 
         public Sprite[] animationforcar;
         public SpriteRenderer sr;
@@ -113,9 +113,11 @@ namespace Enemy
         }
         private void rotation()
         {
-            var radAngle = degAngle * Mathf.Deg2Rad;
-            print(radAngle);
-            _rigidbody.linearVelocity = new Vector2(Mathf.Cos(radAngle), Mathf.Sin(radAngle) * startVelocity);
+            Vector2 dir = _rigidbody.linearVelocity;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+            Debug.Log(transform.rotation);
         }
     }
 }
