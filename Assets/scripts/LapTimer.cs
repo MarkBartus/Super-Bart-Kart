@@ -35,6 +35,8 @@ public class LapTimer : MonoBehaviour
         if (laps == 3)
         {
             //finish game
+
+            lapTimer = lapTimer;
         }
     }
 

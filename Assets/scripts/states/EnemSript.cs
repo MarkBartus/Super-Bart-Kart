@@ -115,9 +115,11 @@ namespace Enemy
         {
             Vector2 dir = _rigidbody.linearVelocity;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            //float rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-            Debug.Log(transform.rotation);
+            //Debug.Log(rotation);
+
+            
         }
     }
 }
