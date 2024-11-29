@@ -8,9 +8,12 @@ public class objects : MonoBehaviour
 
     public float boostTimer = 1;
     public float enemyBoostTimer = 1;
-    public bool boostActive = true;
+    private bool boostActive = true;
 
-    public bool negSpeed = true;
+    public bool isActive = true;
+    
+
+    private bool negSpeed = true;
     public float negTimer = 1;
     public float enemyNegTimer = 1;
     PlayerScript playerScript;
@@ -27,7 +30,7 @@ public class objects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (boostActive == false)
+        if (boostActive == false && isActive == true)
         {
             boostTimer = boostTimer - Time.deltaTime;
 
@@ -64,7 +67,7 @@ public class objects : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "mario_0"  && boostActive == true)
+        if (other.gameObject.name == "mario_0"  && boostActive == true && isActive == true)
         {
             playerScript = other.GetComponent<PlayerScript>();
             playerScript.moveSpeed += 2;
@@ -73,7 +76,7 @@ public class objects : MonoBehaviour
 
         }
 
-        if (other.gameObject.name == "Koopatroopa" && boostActive == true)
+        if (other.gameObject.name == "Koopatroopa" && boostActive == true && isActive == true)
         {
             enemScript = other.GetComponent<EnemScript>();
             enemScript.moveSpeed += 2;
@@ -81,23 +84,24 @@ public class objects : MonoBehaviour
             boostActive = false;
 
         }
-
-        if (other.gameObject.name == "mario_0" && negSpeed == true)
+        
+        if (other.gameObject.name == "mario_0" && negSpeed == true && isActive == false)
         {
-            playerScript = other.GetComponent<PlayerScript>();
+            enemScript = other.GetComponent<EnemScript>();
             enemScript.moveSpeed -= 2;
 
             negSpeed = false;
 
         }
 
-        if (other.gameObject.name == "Koopatroopa" && negSpeed == true)
+        if (other.gameObject.name == "Koopatroopa" && negSpeed == true && isActive == false)
         {
-            enemScript = other.GetComponent<EnemScript>();
+            playerScript = other.GetComponent<PlayerScript>();
             playerScript.moveSpeed -= 2;
 
             negSpeed = false;
 
         }
+        
     }
 }

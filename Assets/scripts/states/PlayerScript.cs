@@ -64,6 +64,7 @@ namespace Player
 
             Vector2 targetDir = new Vector2(_joystick.Direction.x, _joystick.Direction.y);
             float angle = Vector2.Angle(targetDir, transform.up);
+            print("player angle:" +angle);
 
             if (_joystick.Direction.x < 0)
             {
@@ -75,7 +76,7 @@ namespace Player
             float spriteAngle = (angle/360)*22;
             int frame = (int)spriteAngle;
 
-            //print("angle= " + angle + " sprite frame = " + spriteAngle);
+            print("Pangle= " + angle + " Psprite frame = " + spriteAngle);
 
             sr.sprite = (animationforcar[frame%22]);
 

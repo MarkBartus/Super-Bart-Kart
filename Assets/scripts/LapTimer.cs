@@ -8,11 +8,12 @@ public class LapTimer : MonoBehaviour
 
     public bool startTimer = false;
 
-    
+    public GameObject background;
 
     private int laps;
 
     public TextMeshProUGUI lTime;
+    public TextMeshProUGUI fTime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,8 +36,13 @@ public class LapTimer : MonoBehaviour
         if (laps == 3)
         {
             //finish game
+            Time.timeScale = 0;
+           // Debug.Log("game end");
+            startTimer = false;
+            
+            background.SetActive(true);
 
-            lapTimer = lapTimer;
+            fTime.text = "Finishd Time: " + lapTimer.ToString("F2");
         }
     }
 
@@ -49,12 +55,8 @@ public class LapTimer : MonoBehaviour
 
             laps = laps + 1;
 
-            Debug.Log(laps);
+           // Debug.Log(laps);
         }
-
-
-
-        
 
 
     }
