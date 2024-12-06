@@ -1764,12 +1764,12 @@ MonoBehaviour:
   playSource: {fileID: 112446470}
   musicSource1: {fileID: 1602747350}
   menu: {fileID: 8300000, guid: d9df4746d75b39a458bdcb6b27b6cbf6, type: 3}
-  game: {fileID: 0}
+  game: {fileID: 8300000, guid: d3322b1ada313344ca0b2605ad06f74d, type: 3}
   Button: {fileID: 0}
   playS: {fileID: 0}
-  driving: {fileID: 0}
-  bump: {fileID: 0}
-  win: {fileID: 0}
+  driving: {fileID: 8300000, guid: c4f1ab50113ba414eb1a2a75cd9e4c27, type: 3}
+  bump: {fileID: 8300000, guid: 88b468c9af4c2e74cb3bdc04da4f1f5a, type: 3}
+  win: {fileID: 8300000, guid: a793497c5ba53bc41882b2d28991fcdf, type: 3}
 --- !u!1 &512618562
 GameObject:
   m_ObjectHideFlags: 0

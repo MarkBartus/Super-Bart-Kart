@@ -7,8 +7,10 @@ public class LapTimer : MonoBehaviour
     public float lapTimer;
 
     public bool startTimer = false;
+    public bool win = false;
 
     public GameObject background;
+    public AudioManager am;
 
     private int laps;
 
@@ -17,7 +19,7 @@ public class LapTimer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        am = FindAnyObjectByType<AudioManager>();
     }
 
 
@@ -33,7 +35,7 @@ public class LapTimer : MonoBehaviour
 
         }
 
-        if (laps == 3)
+        if (laps == 3 && win == false)
         {
             //finish game
             Time.timeScale = 0;
@@ -42,7 +44,10 @@ public class LapTimer : MonoBehaviour
             
             background.SetActive(true);
 
+            am.PlaySFX(am.win);
+
             fTime.text = "Finishd Time: " + lapTimer.ToString("F2");
+            win = true;
         }
     }
 

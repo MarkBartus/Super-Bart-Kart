@@ -1,0 +1,10 @@
+# ninja log v5
+49	1843	7550997327379654	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	32f07a32821b01dd
+78	1906	7550997328108572	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	4caed24055df139c
+41	1915	7550997328088624	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	902177d87c2d6e1c
+67	1948	7550997328533167	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	828e5241ac1d03c
+130	1996	7550997329071032	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	96ae896a19603c00
+12	2064	7550997329734314	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	aa38f53e89e3f
+59	2253	7550997331639861	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	a6795eac5531eb29
+1	2384	7550997332901330	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	8eb65bd86e0f4e6d
+2384	2551	7550997334680670	C:/Users/540436/Super Bart Kart/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/622r295s/obj/arm64-v8a/libgame.so	eb34f701865a31cb

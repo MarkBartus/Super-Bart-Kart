@@ -23,8 +23,9 @@ namespace Player
 
         public Sprite[] animationforcar;
         public SpriteRenderer sr;
+        public AudioManager am;
 
-
+        public bool bump = false;
         // variables holding the different player states
 
 
@@ -40,8 +41,8 @@ namespace Player
             sr = GetComponent<SpriteRenderer>();
             sm = gameObject.AddComponent<StateMachine>();
             _animator = GetComponent<Animator>();
-
-            
+            _rigidbody = gameObject.GetComponent<Rigidbody>();
+            am = FindAnyObjectByType<AudioManager>();
 
             //anim = GetComponent<Animator>();
 
@@ -79,7 +80,13 @@ namespace Player
             print("Pangle= " + angle + " Psprite frame = " + spriteAngle);
 
             sr.sprite = (animationforcar[frame%22]);
-
+            /*
+            if (_rigidbody.linearVelocity != Vector3.zero)
+            {
+                am.PlaySFX(am.driving);
+            }
+            */
+            
 
         }
 

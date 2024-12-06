@@ -47,7 +47,7 @@ public class AudioManager : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
 
-        if (currentScene.name == "MainMenu" && musicPlaying == false)
+        if (currentScene.name == "Menu" && musicPlaying == false)
         {
             musicSource.clip = menu;
             musicSource.Play();
